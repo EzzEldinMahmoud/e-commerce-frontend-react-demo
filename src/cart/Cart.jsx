@@ -109,7 +109,7 @@ Continue Shopping
         <Typography variant='h4' style={{color:'black'}} >{'$'+cart['cartTotal']}</Typography>
 
         </div>
-        <div className='w-full h-full mt-1 flex-row flex  mt-2 mb-2 justify-center items-center' >
+        <div className='w-full h-full -1 flex-row flex  mt-2 mb-2 justify-center items-center' >
         <StripeCheckout
         stripeKey={key}
         image='https://images.unsplash.com/photo-1613243555988-441166d4d6fd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'

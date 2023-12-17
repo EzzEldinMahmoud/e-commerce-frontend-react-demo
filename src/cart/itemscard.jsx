@@ -5,10 +5,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {useDispatch} from 'react-redux'
+import {removeCartItem} from '../redux/features/cartSlice'
 
 function ItemCard({item}) {
     const [count,setcount]=React.useState(item['cartCount'])
-
+    const dispatch=useDispatch()
   return (
     <div>
         <div className='w-full flex-row flex h-32 m-2 flex-1 '>
@@ -34,7 +36,9 @@ function ItemCard({item}) {
         </Typography>
         <Button size="large" onClick={
         (e)=>{
-        setcount(count -1);
+       if(count != 0){ setcount(count -1);}else{
+        dispatch(removeCartItem({...item,price:item['price']}))
+       }
         }
         }>-</Button>
       </CardActions>

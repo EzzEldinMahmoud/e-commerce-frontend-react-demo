@@ -17,11 +17,16 @@ const cartSlice = createSlice({
         },
         removeCartItem:(state,action)=>{
             const item = action.payload;
-            state.cartItems.pop(item);
-            state.cartTotal -= parseInt(action.payload.price );
-            console.log(state.cartTotal);
-            state.cartCount += 1; 
-        }
+            const index = state.cartItems.findIndex((cartItem)=>cartItem.id === item.id);
+            if(index == 0){
+                state.cartItems.splice(index,1);
+                state.cartTotal -= parseInt(action.payload.price );
+                state.cartCount -= 1; 
+            }
+           
+
+        },
+     
     }
 });
 export const {addCartItem,removeCartItem} = cartSlice.actions;
