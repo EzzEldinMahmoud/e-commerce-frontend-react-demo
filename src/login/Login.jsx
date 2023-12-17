@@ -57,7 +57,7 @@ function handleform(e){
       setOpen(true);
       settypeofalert('success')
       setmessagehere('Logged in Successfully')
-      navigate('/home');
+      navigate('/');
     }
    
    }).catch((err)=>{
