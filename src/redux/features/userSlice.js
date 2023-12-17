@@ -1,12 +1,14 @@
 import {createSlice} from '@reduxjs/toolkit';
+import { PURGE } from 'redux-persist';
+const initialState={
+  currentuser:null,
+    isfetching:false,
+    error:false,
+}
 
 const userSlice = createSlice({
     name:'user',
-    initialState:{
-      currentuser:null,
-        isfetching:false,
-        error:false,
-    },
+    initialState:initialState,
     reducers:{
        loginstart:(state)=>{
 
@@ -20,7 +22,12 @@ const userSlice = createSlice({
         state.isfetching=false;
         state.error=true;
          },
-    }
+    },
+    extraReducers: (builder) => {
+      builder.addCase(PURGE, () => {
+        return initialState;
+      });
+    },
 });
 export const { loginstart ,loginsuccess ,loginfailure} = userSlice.actions;
 

@@ -22,9 +22,9 @@ import AsyncSelect  from 'react-select/async';
 import { components } from 'react-select';
 import Avatar from '@mui/material/Avatar';
 import MenuItem from '@mui/material/MenuItem';
+import { persistor } from '../redux/app/store';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import Menu from '@mui/material/Menu';
 
 function HomeIcon(props) {
 
@@ -37,6 +37,14 @@ function HomeIcon(props) {
 }
 
 function Navbar() { 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const [products,setproducts]=React.useState([])
   async function getdata ()  {  
    
@@ -148,9 +156,27 @@ const DropdownIndicator = (
              
             { currentuser != null ?
             <div className='flex-row flex items-center space-x-2'>
-               <IconButton   sx={{ p: 0 ,marginLeft:1}}>
-               <Avatar alt={ `${currentuser['username'] }`}  />
-
+               <IconButton onClick={
+                handleClick
+               }   sx={{ p: 0 ,marginLeft:1}}>
+               <Avatar  alt={ `${currentuser['username'] }`}  />
+               <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={function handlelogout(){
+          handleClose();
+          persistor.purge()
+          
+          }}>Logout</MenuItem>
+      </Menu>
               
               </IconButton>
                <IconButton  onClick={

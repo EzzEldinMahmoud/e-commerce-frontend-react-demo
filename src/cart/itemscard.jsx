@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {useDispatch} from 'react-redux'
-import {removeCartItem} from '../redux/features/cartSlice'
+import {increasequantity, removeCartItem} from '../redux/features/cartSlice'
 
 function ItemCard({item}) {
     const [count,setcount]=React.useState(item['cartCount'])
@@ -29,6 +29,7 @@ function ItemCard({item}) {
         <Button size="large" onClick={
         ()=>{
         setcount(count+1);
+        dispatch(increasequantity({...item,price:item['price']}))
         }
         }>+</Button>
         <Typography gutterBottom variant="h5" component="div">
