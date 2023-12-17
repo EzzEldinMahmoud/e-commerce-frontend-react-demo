@@ -151,7 +151,7 @@ const DropdownIndicator = (
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+           
              
              
             { currentuser != null ?
@@ -205,7 +205,7 @@ navigate('/signup')
                 </Typography>
               </IconButton>
              </div>}
-            </Tooltip>
+           
           </Box>
         </Toolbar>
       </Container>
