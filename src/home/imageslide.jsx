@@ -11,7 +11,7 @@ const divStyle = {
   alignItems: "center",
   justifyContent: "center",
   backgroundSize: "cover",
-  height: "700px",
+  height: "500px",
   scrollbars: "none",
   borderRadius: "30px",
 

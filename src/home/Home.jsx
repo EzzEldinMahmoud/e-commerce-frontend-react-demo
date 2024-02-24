@@ -41,7 +41,7 @@ function Home() {
     alignItems:'start',
     
     flexDirection:'column',
-    width:'80%',
+    width:'100%',
     height:'100%',
     margin:'auto',
     marginTop:'20px',
@@ -59,8 +59,8 @@ function Home() {
 <Divider className='w-full ' />
 <div className='w-full justify-between flex-row flex'>
   
-<Box sx={{ flexGrow:1, display: { xs: 'none', md: 'flex' },padding:1,justifyContent:'space-between',alignItems:'center' }}>
-          <FormControl sx={{ m: 1, width: '20%' }} >
+<Box sx={{ flexGrow:1, display: { xs: 'flex flex-row', md: 'flex-row flex' },padding:1,justifyContent:'space-between',alignItems:'center' }}>
+          <FormControl sx={{ m: 1, width: '100%' }} >
          
           <OutlinedInput
           placeholder='Search'
@@ -79,7 +79,7 @@ function Home() {
           />
         </FormControl>
         <div>
-            <FormControl sx={{ m: 1, minWidth: 120 }}>
+            <FormControl sx={{ m: 1, minWidth: '100%' }} >
         <InputLabel id="demo-simple-select-standard-label">Category</InputLabel>
 
         <Select
@@ -97,7 +97,7 @@ function Home() {
         </Select>
    
       </FormControl>
-        <FormControl sx={{ m: 1, minWidth: 120 ,color:'black'}}>
+        <FormControl sx={{ m: 1, minWidth: '100%' ,color:'black'}}>
         <InputLabel id="demo-simple-select-standard-label">Price</InputLabel>
 
         <Select
@@ -119,7 +119,7 @@ function Home() {
        
           </Box>
 </div>
-<div className='flex-row flex w-full p-24 items-center justify-center'>
+<div className='flex-row flex w-full  items-center justify-center'>
 <Productslist cat ={catagory} search={search} sort={sort} />
 </div>
 
@@ -131,15 +131,16 @@ function Home() {
         Subscribe to our news letter</Typography>
         <Box style={{
              margin:'auto',
-             marginTop:'20px',
+             marginTop:'50px',
+          marginBottom: '50px',
             color:'black',
             display:'flex',
             justifyContent:'center',
             alignItems:'center',
             alignContent:'center',
-            flexDirection:'row',
+            flexDirection:'column',
             padding:2,
-            width:'80%',
+            width:'100%',
             height:400,
         }}>
 <img src='https://img.freepik.com/free-vector/greeting-cards-abstract-concept-vector-illustration-handmade-card-send-greeting-letter-online-birthday-party-celebration-diy-postcard-winter-holiday-christmas-tradition-abstract-metaphor_335657-6202.jpg?w=826&t=st=1702648829~exp=1702649429~hmac=10dfcfe94f7ad6a95d61bd52b218d68e78250d32c0c94033ac266b745158743e' alt='newsletter' style={{height:'100%',width:"100%",objectFit:'contain'}}/>
@@ -150,7 +151,7 @@ function Home() {
               alignItems:'center',
               flexDirection:'column',
             
-              width:'80%',
+              width:'100%',
               height:'100%',
               
          }}>

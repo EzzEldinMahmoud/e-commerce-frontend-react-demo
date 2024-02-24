@@ -24,8 +24,8 @@ sethover(true)
     onMouseLeave={()=>{
       sethover(false)
     }}>
-      <div style={{ backgroundColor: 'transparent', shadowOpacity: 0,border:0 }} sx={{ maxWidth: '100%',margin:1 }} >
-      <img src={item['img']} alt={item['title']} style={{height:'200'}}/>
+      <div style={{ backgroundColor: 'transparent', shadowOpacity: 0,border:0 }} md={{ maxWidth: '100%',margin:1 }} >
+      <img src={item['img']} alt={item['title']} style={{height:'200',width:'50%'}}/>
     
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

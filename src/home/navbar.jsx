@@ -86,7 +86,7 @@ const DropdownIndicator = (
     <AppBar position="static" style={{backgroundColor:'white'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-  <LocalMallOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1,color:'black' ,}} fontSize="large" />
+  <LocalMallOutlinedIcon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1,color:'black' ,}} fontSize="large" />
           <Typography
           onClick={()=>{navigate('/home')}}
             variant="h6"
@@ -96,7 +96,7 @@ const DropdownIndicator = (
            
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'flex', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 'bold',
               letterSpacing: '.3rem',
@@ -113,7 +113,7 @@ const DropdownIndicator = (
 
          
         
-          <Box sx={{ flexGrow:1, display: { xs: 'none', md: 'flex' },padding:1 }}>
+          <Box sx={{ flexGrow:1, display: { xs: 'flex', md: 'flex' },padding:1 }}>
           <FormControl sx={{ m: 1, width: '100%' }} >
           <AsyncSelect cacheOptions defaultOptions loadOptions={ getdata }
           

@@ -48,12 +48,14 @@ search == '' && setfilteredproducts(products)
   
   return (
     <div >
-      <Box sx={{ flexGrow: 1 ,justifyContent:'center'}}>
-      <Grid container spacing={2}>
+      <Box className="flex-col flex " style={{
+        width:'100%'
+      }}>
+        <Grid className='items-center  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         {
       search.length > 0 && filteredproducts.length > 0 ? filteredproducts?.map((item,index)=>{
             return(
-                <Grid item xs= {`${ filteredproducts.length == 1 ? 'auto': 3}`}>
+                <Grid item xs= {`${ filteredproducts.length == 1 ? 'auto': 1}`}>
                 {
                     
                    <Productcard key={item['_id']} item={item}/>
