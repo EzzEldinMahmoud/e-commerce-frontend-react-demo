@@ -91,7 +91,7 @@ setuser(res.data)
         height: "100vh",
       }}
     >
-      <div className=" m-auto  w-1/2 bg-white flex-col  flex p-10 rounded-md	">
+      <div className=" m-auto   w-full md:w-1/2 lg:w-1/2 bg-white flex-col  flex p-10 rounded-md	">
         <Box
           sx={{
             "& > :not(style)": { m: 1, width: "100%" },

@@ -13,8 +13,8 @@ function ItemCard({item}) {
     const dispatch=useDispatch()
   return (
     <div>
-        <div className='w-full flex-row flex h-32 m-2 flex-1 '>
-        <img src={item['img']} alt={item['title']} style={{height:'100%',width:'40%',objectFit:'contain'}}/>
+        <div className='w-full flex-col md:flex-row flex h-full m-2  '>
+        <img src={item['img']} alt={item['title']} style={{height:'100%',width:'40%',objectFit:'cover'}}/>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
             {item['title']}
@@ -37,7 +37,7 @@ function ItemCard({item}) {
         </Typography>
         <Button size="large" onClick={
         (e)=>{
-       if(count != 0){ setcount(count -1);}else{
+       if(count == 0){ setcount(count -1);}else{
         dispatch(removeCartItem({...item,price:item['price']}))
        }
         }

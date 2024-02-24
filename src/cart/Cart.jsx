@@ -34,7 +34,7 @@ function Cart() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
-    <div className='w-full h-full flex-col flex justify-center items-center ' >
+    <div className='w-full h-full flex-col  flex justify-center items-center ' >
       <Typography variant='h1' >Cart</Typography>
       <div className='w-full  flex-row flex justify-between items-center' >
       <div className='w-1/2  flex justify-center items-center'>
@@ -51,13 +51,11 @@ function Cart() {
 Continue Shopping
 </Button>
       </div>
-      <div className='w-1/2  flex justify-start items-start'>
-
+    
       </div>
-      </div>
-      <div className='w-full h-full  flex-row flex justify-start items-start' >
+      <div className='w-full h-full  flex-col flex justify-center items-center space-y-2' >
       <div
-      className='w-8/12  p-2 flex flex-1 flex-col justify-start items-start'
+      className='w-full md:w-8/12  p-2 flex flex-1 flex-col justify-start items-start'
       >
         {
           cart.cartItems.map((item)=>{
@@ -67,7 +65,7 @@ Continue Shopping
           })
         }
       </div>
-      <div className='w-4/12 h-screen  flex flex-1 justify-start items-start'>
+      <div className='w-full md:w-4/12 h-screen  flex flex-1 justify-start items-start'>
       <Box
       sx={{
         display: 'flex',
@@ -75,7 +73,7 @@ Continue Shopping
         flexWrap: 'wrap',
         '& > :not(style)': {
           m: 1,
-          width: '80%',
+          width: '100%',
           height: '100%',
           backgroundColor:'white',
           padding:3,

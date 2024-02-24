@@ -48,10 +48,10 @@ search == '' && setfilteredproducts(products)
   
   return (
     <div >
-      <Box className="flex-col flex " style={{
+      <Box className="flex-col flex items-center p-1 " style={{
         width:'100%'
       }}>
-        <Grid className='items-center  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        <Grid className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full items-center'>
         {
       search.length > 0 && filteredproducts.length > 0 ? filteredproducts?.map((item,index)=>{
             return(

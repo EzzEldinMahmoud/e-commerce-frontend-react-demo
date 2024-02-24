@@ -36,9 +36,9 @@ response()
 },[id])
     return (
     <div className='w-full h-screen flex-col flex justify-center items-center ' >
-      <div className='w-full flex-row flex h-auto'>
-<img src={product['img']} alt={product['title']} className='w-1/2 ' style={{height:800, margin:10,objectFit:'contain'}}/>
-<div className='w-1/2 h-full flex-col flex justify-start items-start'>
+      <div className='w-full h-full flex-col sm:flex-row flex items-center p-1'>
+<img src={product['img']} alt={product['title']} className='w-full sm:w-1/2 ' style={{height:800, margin:10,objectFit:'contain'}}/>
+<div className='w-full sm:w-1/2 h-full flex-col flex justify-start items-start'>
 <h1 className='text-4xl font-bold'>{product['title']}</h1>
 <div className=' flex-row flex  items-start font-bold mt-1'>
 <h1 className='text-sm font-light'>USD </h1>
@@ -78,7 +78,7 @@ response()
   </Select>
 </FormControl>
 </div>
-<Button variant="contained" onClick={
+<Button variant="contained" className='w-full sm:w-1/2 h-12' onClick={
   (e)=>{
     e.stopPropagation()
     console.log(product['price'] * quatity);

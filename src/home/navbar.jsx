@@ -160,25 +160,29 @@ const DropdownIndicator = (
                 handleClick
                }   sx={{ p: 0 ,marginLeft:1}}>
                <Avatar  alt={ `${currentuser['username'] }`}  />
-               <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
+               
+              
+              </IconButton><Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                      'aria-labelledby': 'basic-button',
+                    }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
+                    <MenuItem onClick={() => {
+                      handleClose()
+                    }}>Profile</MenuItem>
+                    <MenuItem onClick={() => {
+                      handleClose()
+                    }}>My account</MenuItem>
         <MenuItem onClick={function handlelogout(){
           handleClose();
           persistor.purge()
           
           }}>Logout</MenuItem>
       </Menu>
-              
-              </IconButton>
                <IconButton  onClick={
               ()=>{
                 navigate('/cart')}

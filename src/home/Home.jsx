@@ -119,7 +119,7 @@ function Home() {
        
           </Box>
 </div>
-<div className='flex-row flex w-full  items-center justify-center'>
+<div className='flex-row flex w-full  items-center justify-center '>
 <Productslist cat ={catagory} search={search} sort={sort} />
 </div>
 
@@ -132,7 +132,7 @@ function Home() {
         <Box style={{
              margin:'auto',
              marginTop:'50px',
-          marginBottom: '50px',
+          marginBottom: '70px',
             color:'black',
             display:'flex',
             justifyContent:'center',
