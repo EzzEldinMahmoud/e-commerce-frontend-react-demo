@@ -18,7 +18,7 @@ const cartSlice = createSlice({
         removeCartItem:(state,action)=>{
             const item = action.payload;
             const index = state.cartItems.findIndex((cartItem)=>cartItem.id === item.id);
-            if(index < 1){
+            if(index >= 0){
                 state.cartItems.splice(index,1);
                 state.cartTotal -= parseInt(action.payload.price );
                 state.cartCount -= 1; 
